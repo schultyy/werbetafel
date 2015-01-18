@@ -14,3 +14,7 @@ no API which allows to set a wallpaper for all spaces simultaneously, so I used 
 # Supported
 
 I tested this on Mac OS X 10.10 only so far.
+
+# Grab a copy
+
+Grab a copy [here](https://github.com/schultyy/werbetafel/releases)
