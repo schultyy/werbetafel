@@ -11,7 +11,6 @@
 #import "WTImageScheduler.h"
 
 @interface AppDelegate()
-@property (strong) WTSettingsController *settingsController;
 @property (strong) WTImageScheduler *scheduler;
 @end
 
@@ -40,6 +39,7 @@
 #pragma mark - WTSettingsDelegate
 
 -(void) settingsControllerDidFinish: (WTSettingsController *) controller {
+    [[self settingsController] setDelegate:nil];
     [self setSettingsController:nil];
     [self setTimer:nil];
     [self setTimer: [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(tick:) userInfo:nil repeats:YES]];
@@ -52,7 +52,7 @@
     [[self timer] invalidate];
     [self setSettingsController: [[WTSettingsController alloc] init]];
     [[self settingsController] setDelegate:self];
-    [[self settingsController] showWindow:self];
+    [[self settingsController] showWindow:nil];
 }
 
 -(IBAction) quitApplication: (id) sender {

@@ -14,7 +14,7 @@
 @implementation WTSettingsController
 
 -(id) init {
-    self = [super initWithWindowNibName:@"WTSettingsWindow"];
+    self = [super initWithWindowNibName:@"WTSettingsWindow" owner:self];
     if(self) {
         [self setModelContext:[[WTModelContext alloc] init]];
     }

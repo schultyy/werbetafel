@@ -15,6 +15,8 @@
 
 @property (strong, nonatomic) NSStatusItem *statusBar;
 
+@property (strong) WTSettingsController *settingsController;
+
 @property (strong) NSTimer *timer;
 
 @property IBOutlet NSMenu *mainMenu;
