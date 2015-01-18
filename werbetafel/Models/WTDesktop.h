@@ -8,6 +8,6 @@
 
 @interface WTDesktop : NSObject
 
--(void) setNewWallpaper: (NSURL *) wallpaper;
+-(void) setNewWallpaper: (NSString *) wallpaper;
 
 @end

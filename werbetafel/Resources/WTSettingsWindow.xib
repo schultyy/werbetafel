@@ -60,10 +60,10 @@
                                                                 </calendarDate>
                                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                <datePickerElements key="datePickerElements" hour="YES" minute="YES" second="YES"/>
+                                                                <datePickerElements key="datePickerElements" hour="YES" minute="YES"/>
                                                             </datePickerCell>
                                                             <connections>
-                                                                <binding destination="QxK-sg-roV" name="value" keyPath="objectValue.time" id="FfL-dD-nsn"/>
+                                                                <binding destination="QxK-sg-roV" name="value" keyPath="objectValue.hour" id="9q8-Go-N29"/>
                                                             </connections>
                                                         </datePicker>
                                                     </subviews>

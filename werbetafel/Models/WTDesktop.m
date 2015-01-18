@@ -8,18 +8,18 @@
 
 @implementation WTDesktop
 
--(void) setNewWallpaper: (NSURL *) wallpaper {
+-(void) setNewWallpaper: (NSString *) wallpaper {
     NSWorkspace *sws = [NSWorkspace sharedWorkspace];
 
     NSError *err = nil;
     for (NSScreen *screen in [NSScreen screens]) {
         NSDictionary *opt = [sws desktopImageOptionsForScreen:screen];
-        [sws setDesktopImageURL:wallpaper forScreen:screen options:opt error:&err];
+        [sws setDesktopImageURL:[[NSURL alloc] initWithString:wallpaper] forScreen:screen options:opt error:&err];
         if (err) {
             NSLog(@"%@",[err localizedDescription]);
         }else{
             NSNumber *scr = [screen deviceDescription][@"NSScreenNumber"];
-            NSLog(@"Set %@ for space %i on screen %@",[wallpaper path],[self spaceNumber],scr);
+            NSLog(@"Set %@ for space %i on screen %@",wallpaper,[self spaceNumber],scr);
         }
     }
 }

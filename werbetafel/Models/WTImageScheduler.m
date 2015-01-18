@@ -26,25 +26,18 @@
 }
 
 -(void)handleSystemTimeChanged {
-    NSLog(@"System time changed");
     NSDate *now = [NSDate date];
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *components = [calendar components:NSHourCalendarUnit fromDate:now];
-    NSLog(@"components");
 
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"WTImageConfig"];
-    NSLog(@"fetch");
-    NSLog(@"Hour %li", components.hour);
-    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"hour = %li", components.hour]];
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"hour = %d", components.hour]];
 
-    NSLog(@"predicate");
     NSError *error = nil;
     NSArray *resultSet = [[[self modelContext] managedObjectContext] executeFetchRequest:fetchRequest error:&error];
     if(resultSet) {
         if([resultSet count] > 0) {
-            NSLog(@"Has results");
             WTImageConfig *image = [resultSet firstObject];
-            NSLog(@"Image %@", image.imagePath);
             [[self desktop] setNewWallpaper:image.imagePath];
         }
     } else {

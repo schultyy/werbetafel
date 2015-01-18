@@ -16,14 +16,9 @@
 
 -(void) setImagePath:(NSURL *)imagePath {
     [self willChangeValueForKey:@"imagePath"];
-    NSString *path = [imagePath absoluteString];
+    NSString *path = [[imagePath filePathURL] absoluteString];
     [self setPrimitiveValue:path forKey:@"imagePath"];
     [self didChangeValueForKey:@"imagePath"];
-}
-
--(NSURL *) imagePath {
-    NSString * path = [self primitiveValueForKey:@"imagePath"];
-    return [NSURL fileURLWithPath:path];
 }
 
 -(void)setHour:(id)hour {
