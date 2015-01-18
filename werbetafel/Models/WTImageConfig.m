@@ -29,4 +29,12 @@
     [self didChangeValueForKey:@"hour"];
 }
 
+-(id) hour {
+    NSDateComponents *components = [[NSDateComponents alloc] init];
+    [components setMinute:0];
+    [components setHour:[[self primitiveValueForKey:@"hour"] integerValue]];
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    return [gregorian dateFromComponents:components];
+}
+
 @end
