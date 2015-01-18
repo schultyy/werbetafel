@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60C8C5E87E13773F2B733B5F /* WTDesktop.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C8C3309F1507A32979B7A0 /* WTDesktop.m */; };
 		844FF7A41A6C02E5008BC6E9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 844FF7A31A6C02E5008BC6E9 /* AppDelegate.m */; };
 		844FF7A61A6C02E5008BC6E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 844FF7A51A6C02E5008BC6E9 /* main.m */; };
 		844FF7A81A6C02E5008BC6E9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844FF7A71A6C02E5008BC6E9 /* Images.xcassets */; };
@@ -25,6 +26,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		60C8C11874FA054499358BD0 /* WTDesktop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTDesktop.h; sourceTree = "<group>"; };
+		60C8C3309F1507A32979B7A0 /* WTDesktop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTDesktop.m; sourceTree = "<group>"; };
 		844FF79D1A6C02E5008BC6E9 /* werbetafel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = werbetafel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		844FF7A11A6C02E5008BC6E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		844FF7A21A6C02E5008BC6E9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -81,6 +84,8 @@
 				844FF7A71A6C02E5008BC6E9 /* Images.xcassets */,
 				844FF7A91A6C02E5008BC6E9 /* MainMenu.xib */,
 				844FF7A01A6C02E5008BC6E9 /* Supporting Files */,
+				60C8C3309F1507A32979B7A0 /* WTDesktop.m */,
+				60C8C11874FA054499358BD0 /* WTDesktop.h */,
 			);
 			path = werbetafel;
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 			files = (
 				844FF7A61A6C02E5008BC6E9 /* main.m in Sources */,
 				844FF7A41A6C02E5008BC6E9 /* AppDelegate.m in Sources */,
+				60C8C5E87E13773F2B733B5F /* WTDesktop.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
