@@ -21,11 +21,10 @@
     [self didChangeValueForKey:@"imagePath"];
 }
 
--(void)setHour:(id)hour {
+-(void)setHour:(id)dateTime {
     [self willChangeValueForKey:@"hour"];
-    NSDate *now = [NSDate date];
     NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSDateComponents *components = [calendar components:NSHourCalendarUnit fromDate:now];
+    NSDateComponents *components = [calendar components:NSHourCalendarUnit fromDate:dateTime];
     [self setPrimitiveValue:@(components.hour) forKey:@"hour"];
     [self didChangeValueForKey:@"hour"];
 }
