@@ -21,5 +21,7 @@
 
 -(IBAction)showSettingsDialog:(id)sender;
 
+-(IBAction) quitApplication: (id) sender;
+
 @end
 

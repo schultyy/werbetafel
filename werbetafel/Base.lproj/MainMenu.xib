@@ -674,6 +674,12 @@
                         <action selector="showSettingsDialog:" target="Voe-Tx-rLC" id="PGb-7D-e67"/>
                     </connections>
                 </menuItem>
+                <menuItem title="Quit" id="wdV-oY-IZO">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="quitApplication:" target="Voe-Tx-rLC" id="iai-hB-3ic"/>
+                    </connections>
+                </menuItem>
             </items>
             <point key="canvasLocation" x="165" y="266.5"/>
         </menu>

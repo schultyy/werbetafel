@@ -55,4 +55,8 @@
     [[self settingsController] showWindow:self];
 }
 
+-(IBAction) quitApplication: (id) sender {
+    [NSApp terminate: nil];
+}
+
 @end
