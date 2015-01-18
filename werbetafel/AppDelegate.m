@@ -7,11 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "WTSettingsController.h"
-#import "WTImageScheduler.h"
 
 @interface AppDelegate()
-@property (strong) WTImageScheduler *scheduler;
 @end
 
 @implementation AppDelegate

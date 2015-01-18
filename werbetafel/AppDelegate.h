@@ -8,6 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 #import "WTSettingsDelegate.h"
+#import "WTSettingsController.h"
+#import "WTImageScheduler.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate, WTSettingsDelegate>
 
@@ -18,6 +20,8 @@
 @property (strong) WTSettingsController *settingsController;
 
 @property (strong) NSTimer *timer;
+
+@property (strong) WTImageScheduler *scheduler;
 
 @property IBOutlet NSMenu *mainMenu;
 
