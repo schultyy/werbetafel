@@ -12,7 +12,7 @@
 @implementation WTImageConfig
 
 @dynamic imagePath;
-@dynamic time;
+@dynamic hour;
 
 -(void) setImagePath:(NSURL *)imagePath {
     [self willChangeValueForKey:@"imagePath"];
@@ -24,6 +24,15 @@
 -(NSURL *) imagePath {
     NSString * path = [self primitiveValueForKey:@"imagePath"];
     return [NSURL fileURLWithPath:path];
+}
+
+-(void)setHour:(id)hour {
+    [self willChangeValueForKey:@"hour"];
+    NSDate *now = [NSDate date];
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [calendar components:NSHourCalendarUnit fromDate:now];
+    [self setPrimitiveValue:@(components.hour) forKey:@"hour"];
+    [self didChangeValueForKey:@"hour"];
 }
 
 @end

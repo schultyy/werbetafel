@@ -13,6 +13,6 @@
 @interface WTImageConfig : NSManagedObject
 
 @property (nonatomic, retain) NSString * imagePath;
-@property (nonatomic, retain) NSDate * time;
+@property (nonatomic, retain) NSNumber * hour;
 
 @end

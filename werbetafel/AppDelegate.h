@@ -14,6 +14,8 @@
 
 @property (strong, nonatomic) NSStatusItem *statusBar;
 
+@property (strong) NSTimer *timer;
+
 @property IBOutlet NSMenu *mainMenu;
 
 -(IBAction)showSettingsDialog:(id)sender;
