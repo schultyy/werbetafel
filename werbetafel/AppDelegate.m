@@ -9,13 +9,17 @@
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
-
-@property (weak) IBOutlet NSWindow *window;
 @end
 
 @implementation AppDelegate
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+-(void) awakeFromNib {
+    [super awakeFromNib];
+    self.statusBar = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+    [[self statusBar] setTitle:@"werbetafel"];
+    self.statusBar.menu = self.mainMenu;
+    self.statusBar.highlightMode = YES;
+
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
