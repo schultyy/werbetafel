@@ -7,9 +7,7 @@
 #import "WTModelContext.h"
 
 @interface WTSettingsController()
-
-@property WTModelContext *modelContext;
-
+@property (strong, readwrite) WTModelContext *modelContext;
 @end
 
 @implementation WTSettingsController

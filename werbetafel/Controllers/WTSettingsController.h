@@ -5,6 +5,9 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class WTModelContext;
+
 
 @interface WTSettingsController : NSWindowController
+@property (strong, readonly) WTModelContext *modelContext;
 @end
