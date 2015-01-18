@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		60C8C1F0C2A599CAD8E3E818 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C8CF20F1571C36AA6D31D6 /* MainMenu.xib */; };
 		60C8C5E87E13773F2B733B5F /* WTDesktop.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C8C3309F1507A32979B7A0 /* WTDesktop.m */; };
+		60C8CF7C5E66BB1DA148B29A /* WTSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C8C9C54BD67907C0798286 /* WTSettingsController.m */; };
 		844FF7A41A6C02E5008BC6E9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 844FF7A31A6C02E5008BC6E9 /* AppDelegate.m */; };
 		844FF7A61A6C02E5008BC6E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 844FF7A51A6C02E5008BC6E9 /* main.m */; };
 		844FF7A81A6C02E5008BC6E9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844FF7A71A6C02E5008BC6E9 /* Images.xcassets */; };
 		844FF7B71A6C02E5008BC6E9 /* werbetafelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 844FF7B61A6C02E5008BC6E9 /* werbetafelTests.m */; };
+		844FF7C11A6C0BFC008BC6E9 /* WTSettingsWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844FF7C01A6C0BFC008BC6E9 /* WTSettingsWindow.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +30,9 @@
 /* Begin PBXFileReference section */
 		60C8C11874FA054499358BD0 /* WTDesktop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTDesktop.h; sourceTree = "<group>"; };
 		60C8C3309F1507A32979B7A0 /* WTDesktop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTDesktop.m; sourceTree = "<group>"; };
+		60C8C9C54BD67907C0798286 /* WTSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTSettingsController.m; sourceTree = "<group>"; };
 		60C8CAE1BA9FB83FFAD8A086 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = werbetafel/Base.lproj/MainMenu.xib; sourceTree = SOURCE_ROOT; };
+		60C8CD9AA00349CF0F6CF885 /* WTSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTSettingsController.h; sourceTree = "<group>"; };
 		844FF79D1A6C02E5008BC6E9 /* werbetafel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = werbetafel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		844FF7A11A6C02E5008BC6E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		844FF7A21A6C02E5008BC6E9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -38,6 +42,7 @@
 		844FF7B01A6C02E5008BC6E9 /* werbetafelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = werbetafelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		844FF7B51A6C02E5008BC6E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		844FF7B61A6C02E5008BC6E9 /* werbetafelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = werbetafelTests.m; sourceTree = "<group>"; };
+		844FF7C01A6C0BFC008BC6E9 /* WTSettingsWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTSettingsWindow.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				60C8CF20F1571C36AA6D31D6 /* MainMenu.xib */,
+				844FF7C01A6C0BFC008BC6E9 /* WTSettingsWindow.xib */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -76,6 +82,8 @@
 		60C8CD98C02F5B5B345B5AB1 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				60C8C9C54BD67907C0798286 /* WTSettingsController.m */,
+				60C8CD9AA00349CF0F6CF885 /* WTSettingsController.h */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -221,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				844FF7A81A6C02E5008BC6E9 /* Images.xcassets in Resources */,
+				844FF7C11A6C0BFC008BC6E9 /* WTSettingsWindow.xib in Resources */,
 				60C8C1F0C2A599CAD8E3E818 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,6 +251,7 @@
 				844FF7A61A6C02E5008BC6E9 /* main.m in Sources */,
 				844FF7A41A6C02E5008BC6E9 /* AppDelegate.m in Sources */,
 				60C8C5E87E13773F2B733B5F /* WTDesktop.m in Sources */,
+				60C8CF7C5E66BB1DA148B29A /* WTSettingsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +438,7 @@
 				844FF7BC1A6C02E5008BC6E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		844FF7BD1A6C02E5008BC6E9 /* Build configuration list for PBXNativeTarget "werbetafelTests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +447,7 @@
 				844FF7BF1A6C02E5008BC6E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

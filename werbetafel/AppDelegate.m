@@ -7,8 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "WTSettingsController.h"
 
 @interface AppDelegate ()
+@property (strong) WTSettingsController *settingsController;
 @end
 
 @implementation AppDelegate
@@ -23,6 +25,13 @@
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
+}
+
+#pragma mark - IBAction
+
+-(IBAction)showSettingsDialog:(id)sender {
+    [self setSettingsController: [[WTSettingsController alloc] init]];
+    [[self settingsController] showWindow:self];
 }
 
 @end

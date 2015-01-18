@@ -16,5 +16,7 @@
 
 @property IBOutlet NSMenu *mainMenu;
 
+-(IBAction)showSettingsDialog:(id)sender;
+
 @end
 

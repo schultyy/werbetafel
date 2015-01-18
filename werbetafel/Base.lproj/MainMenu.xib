@@ -670,6 +670,9 @@
             <items>
                 <menuItem title="Configure" id="vPz-w1-D9w">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="showSettingsDialog:" target="Voe-Tx-rLC" id="PGb-7D-e67"/>
+                    </connections>
                 </menuItem>
             </items>
             <point key="canvasLocation" x="165" y="266.5"/>
