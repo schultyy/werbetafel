@@ -25,7 +25,7 @@
     self.statusBar.highlightMode = YES;
 
     [self setScheduler:[[WTImageScheduler alloc] init]];
-
+    [[self scheduler] handleSystemTimeChanged];
     [self setTimer: [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(tick:) userInfo:nil repeats:YES]];
 }
 
@@ -48,12 +48,10 @@
 #pragma mark - IBAction
 
 -(IBAction)showSettingsDialog:(id)sender {
+    NSLog(@"Settings");
     [[self timer] invalidate];
-    if(!self.settingsController) {
-        [self setSettingsController: [[WTSettingsController alloc] init]];
-        [[self settingsController] setDelegate:self];
-    }
-
+    [self setSettingsController: [[WTSettingsController alloc] init]];
+    [[self settingsController] setDelegate:self];
     [[self settingsController] showWindow:self];
 }
 

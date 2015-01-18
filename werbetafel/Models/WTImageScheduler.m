@@ -42,7 +42,7 @@
                 return;
             }
             [[self desktop] setNewWallpaper:image.imagePath];
-            [self setLastImage:image.imagePath];
+            [self setLastImage: image.imagePath];
         }
     } else {
         [NSApp willNotPresentError:error];

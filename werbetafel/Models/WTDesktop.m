@@ -24,7 +24,9 @@
 }
 
 -(void) workspaceDidChange:(NSNotification *) notification {
-    [self setNewWallpaper:self.currentWallpaper];
+    if(self.currentWallpaper) {
+        [self setNewWallpaper:self.currentWallpaper];
+    }
 }
 
 -(void) setNewWallpaper: (NSString *) wallpaper {
