@@ -52,7 +52,7 @@
                                                     <subviews>
                                                         <datePicker verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LbT-OE-x6p">
                                                             <rect key="frame" x="6" y="-5" width="139" height="22"/>
-                                                            <datePickerCell key="cell" borderStyle="bezel" alignment="left" datePickerStyle="textField" id="btI-W3-jdA">
+                                                            <datePickerCell key="cell" alignment="left" datePickerStyle="textField" id="btI-W3-jdA">
                                                                 <font key="font" metaFont="system"/>
                                                                 <calendarDate key="date" timeIntervalSinceReferenceDate="-595929600" calendarFormat="%Y-%m-%d %H:%M:%S %z">
                                                                     <!--1982-02-12 16:00:00 +0000-->
