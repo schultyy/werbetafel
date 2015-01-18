@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60C8C1F0C2A599CAD8E3E818 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60C8CF20F1571C36AA6D31D6 /* MainMenu.xib */; };
 		60C8C5E87E13773F2B733B5F /* WTDesktop.m in Sources */ = {isa = PBXBuildFile; fileRef = 60C8C3309F1507A32979B7A0 /* WTDesktop.m */; };
 		844FF7A41A6C02E5008BC6E9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 844FF7A31A6C02E5008BC6E9 /* AppDelegate.m */; };
 		844FF7A61A6C02E5008BC6E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 844FF7A51A6C02E5008BC6E9 /* main.m */; };
 		844FF7A81A6C02E5008BC6E9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844FF7A71A6C02E5008BC6E9 /* Images.xcassets */; };
-		844FF7AB1A6C02E5008BC6E9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844FF7A91A6C02E5008BC6E9 /* MainMenu.xib */; };
 		844FF7B71A6C02E5008BC6E9 /* werbetafelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 844FF7B61A6C02E5008BC6E9 /* werbetafelTests.m */; };
 /* End PBXBuildFile section */
 
@@ -28,13 +28,13 @@
 /* Begin PBXFileReference section */
 		60C8C11874FA054499358BD0 /* WTDesktop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTDesktop.h; sourceTree = "<group>"; };
 		60C8C3309F1507A32979B7A0 /* WTDesktop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTDesktop.m; sourceTree = "<group>"; };
+		60C8CAE1BA9FB83FFAD8A086 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = werbetafel/Base.lproj/MainMenu.xib; sourceTree = SOURCE_ROOT; };
 		844FF79D1A6C02E5008BC6E9 /* werbetafel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = werbetafel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		844FF7A11A6C02E5008BC6E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		844FF7A21A6C02E5008BC6E9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		844FF7A31A6C02E5008BC6E9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		844FF7A51A6C02E5008BC6E9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		844FF7A71A6C02E5008BC6E9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		844FF7AA1A6C02E5008BC6E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		844FF7B01A6C02E5008BC6E9 /* werbetafelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = werbetafelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		844FF7B51A6C02E5008BC6E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		844FF7B61A6C02E5008BC6E9 /* werbetafelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = werbetafelTests.m; sourceTree = "<group>"; };
@@ -58,6 +58,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		60C8C150D2D73C49BF2DCF1E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				60C8CF20F1571C36AA6D31D6 /* MainMenu.xib */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		60C8C9F2216C3D9721AA9CED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		60C8CD98C02F5B5B345B5AB1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		844FF7941A6C02E5008BC6E9 = {
 			isa = PBXGroup;
 			children = (
@@ -82,10 +104,12 @@
 				844FF7A21A6C02E5008BC6E9 /* AppDelegate.h */,
 				844FF7A31A6C02E5008BC6E9 /* AppDelegate.m */,
 				844FF7A71A6C02E5008BC6E9 /* Images.xcassets */,
-				844FF7A91A6C02E5008BC6E9 /* MainMenu.xib */,
 				844FF7A01A6C02E5008BC6E9 /* Supporting Files */,
 				60C8C3309F1507A32979B7A0 /* WTDesktop.m */,
 				60C8C11874FA054499358BD0 /* WTDesktop.h */,
+				60C8CD98C02F5B5B345B5AB1 /* Controllers */,
+				60C8C150D2D73C49BF2DCF1E /* Resources */,
+				60C8C9F2216C3D9721AA9CED /* Models */,
 			);
 			path = werbetafel;
 			sourceTree = "<group>";
@@ -197,7 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				844FF7A81A6C02E5008BC6E9 /* Images.xcassets in Resources */,
-				844FF7AB1A6C02E5008BC6E9 /* MainMenu.xib in Resources */,
+				60C8C1F0C2A599CAD8E3E818 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,10 +264,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		844FF7A91A6C02E5008BC6E9 /* MainMenu.xib */ = {
+		60C8CF20F1571C36AA6D31D6 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				844FF7AA1A6C02E5008BC6E9 /* Base */,
+				60C8CAE1BA9FB83FFAD8A086 /* Base */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
