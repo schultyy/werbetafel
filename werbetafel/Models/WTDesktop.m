@@ -6,11 +6,31 @@
 #import "WTDesktop.h"
 #import <Cocoa/Cocoa.h>
 
+@interface WTDesktop()
+@property (retain) NSString *currentWallpaper;
+@end
+
 @implementation WTDesktop
+
+-(id) init {
+    self = [super init];
+    if(self) {
+        [[[NSWorkspace sharedWorkspace] notificationCenter] addObserver:self
+                                                               selector:@selector(workspaceDidChange:)
+                                                                   name:NSWorkspaceActiveSpaceDidChangeNotification
+                                                                 object:nil];
+    }
+    return self;
+}
+
+-(void) workspaceDidChange:(NSNotification *) notification {
+    [self setNewWallpaper:self.currentWallpaper];
+}
 
 -(void) setNewWallpaper: (NSString *) wallpaper {
     NSWorkspace *sws = [NSWorkspace sharedWorkspace];
     NSError *err = nil;
+    [self setCurrentWallpaper:wallpaper];
     NSURL *wallpaperUrl = [NSURL fileURLWithPath:wallpaper];
     for (NSScreen *screen in [NSScreen screens]) {
         NSDictionary *opt = [sws desktopImageOptionsForScreen:screen];

@@ -9,5 +9,5 @@
 @interface WTDesktop : NSObject
 
 -(void) setNewWallpaper: (NSString *) wallpaper;
-
+-(void) workspaceDidChange:(NSNotification *) notification;
 @end
