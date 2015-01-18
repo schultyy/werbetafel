@@ -9,5 +9,9 @@
 
 
 @interface WTSettingsController : NSWindowController
+
 @property (strong, readonly) WTModelContext *modelContext;
+
+-(IBAction) saveAndClose:(id) sender;
+-(IBAction) saveWithoutClosing:(id) sender;
 @end

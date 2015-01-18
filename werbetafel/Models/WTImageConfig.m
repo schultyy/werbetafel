@@ -21,4 +21,9 @@
     [self didChangeValueForKey:@"imagePath"];
 }
 
+-(NSURL *) imagePath {
+    NSString * path = [self primitiveValueForKey:@"imagePath"];
+    return [NSURL fileURLWithPath:path];
+}
+
 @end

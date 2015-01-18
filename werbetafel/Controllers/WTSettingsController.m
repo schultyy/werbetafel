@@ -20,4 +20,19 @@
     return self;
 }
 
+-(IBAction) saveAndClose:(id) sender {
+    NSError *error = nil;
+    if([[[self modelContext] managedObjectContext] save:&error]) {
+        [[self window] orderOut: self];
+    }
+    else {
+        [self presentError:error modalForWindow:self.window delegate:nil didPresentSelector:NULL contextInfo:NULL];
+    }
+}
+
+-(IBAction) saveWithoutClosing:(id) sender {
+    [[[self modelContext] managedObjectContext] reset];
+    [[self window] orderOut: self];
+}
+
 @end

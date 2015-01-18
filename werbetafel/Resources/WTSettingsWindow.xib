@@ -20,9 +20,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="536" height="302"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <scrollView ambiguous="YES" misplaced="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7W-HE-e65">
+                    <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7W-HE-e65">
                         <rect key="frame" x="20" y="81" width="496" height="201"/>
-                        <clipView key="contentView" ambiguous="YES" misplaced="YES" id="BCn-ty-PkB">
+                        <clipView key="contentView" id="BCn-ty-PkB">
                             <rect key="frame" x="1" y="0.0" width="238" height="134"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
@@ -128,37 +128,67 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </tableHeaderView>
                     </scrollView>
-                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0nd-IT-u41">
-                        <rect key="frame" x="494" y="51" width="22" height="22"/>
-                        <buttonCell key="cell" type="square" alternateTitle="addConfig" bezelStyle="shadowlessSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bwy-FC-U70">
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="I0I-4g-MhI">
+                        <rect key="frame" x="491" y="48" width="25" height="25"/>
+                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSAddTemplate" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dXT-1X-chf">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
-                            <action selector="add:" target="9nK-Oe-d5p" id="jUh-6o-Sch"/>
+                            <action selector="add:" target="9nK-Oe-d5p" id="F2J-LX-x1B"/>
                         </connections>
                     </button>
-                    <button ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BQF-3R-1eC">
-                        <rect key="frame" x="462" y="51" width="22" height="22"/>
-                        <buttonCell key="cell" type="square" alternateTitle="removeConfig" bezelStyle="shadowlessSquare" image="NSRemoveTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="G0l-ZQ-vtY">
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="yqY-hh-yII">
+                        <rect key="frame" x="456" y="48" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="nri-Ly-PbN"/>
+                        </constraints>
+                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSRemoveTemplate" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="19J-gJ-d3G">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
-                            <action selector="remove:" target="9nK-Oe-d5p" id="0YZ-98-C04"/>
+                            <action selector="remove:" target="9nK-Oe-d5p" id="uHq-4z-y2K"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bl2-RB-A93">
+                        <rect key="frame" x="385" y="13" width="137" height="32"/>
+                        <buttonCell key="cell" type="push" title="Save and Close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nrW-rM-R0R">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="saveAndClose:" target="-2" id="ZeB-Uc-wO0"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C7s-nx-uJP">
+                        <rect key="frame" x="216" y="13" width="169" height="32"/>
+                        <buttonCell key="cell" type="push" title="Close without saving" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LaB-vs-maX">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="saveWithoutClosing:" target="-2" id="5mo-Vj-v94"/>
                         </connections>
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="BQF-3R-1eC" firstAttribute="top" secondItem="J7W-HE-e65" secondAttribute="bottom" constant="8" id="3Dg-i0-InB"/>
+                    <constraint firstItem="yqY-hh-yII" firstAttribute="bottom" secondItem="I0I-4g-MhI" secondAttribute="bottom" id="99s-Ry-97b"/>
+                    <constraint firstAttribute="bottom" secondItem="J7W-HE-e65" secondAttribute="bottom" constant="81" id="S97-BC-Si5"/>
                     <constraint firstItem="J7W-HE-e65" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="20" id="aKS-sY-GZN"/>
                     <constraint firstItem="J7W-HE-e65" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="crg-eZ-t7k"/>
+                    <constraint firstItem="I0I-4g-MhI" firstAttribute="leading" secondItem="yqY-hh-yII" secondAttribute="trailing" constant="10" symbolic="YES" id="gdH-Yt-hBM"/>
+                    <constraint firstAttribute="bottom" secondItem="yqY-hh-yII" secondAttribute="bottom" constant="48" id="jXz-yv-nq2"/>
+                    <constraint firstItem="I0I-4g-MhI" firstAttribute="top" secondItem="J7W-HE-e65" secondAttribute="bottom" constant="8" symbolic="YES" id="qOB-px-RDh"/>
+                    <constraint firstAttribute="trailing" secondItem="yqY-hh-yII" secondAttribute="trailing" constant="55" id="qco-uF-fXx"/>
+                    <constraint firstItem="yqY-hh-yII" firstAttribute="top" secondItem="J7W-HE-e65" secondAttribute="bottom" constant="8" symbolic="YES" id="sWh-Xa-wSe"/>
+                    <constraint firstItem="J7W-HE-e65" firstAttribute="trailing" secondItem="I0I-4g-MhI" secondAttribute="trailing" id="sxJ-Jh-YQQ"/>
                     <constraint firstAttribute="trailing" secondItem="J7W-HE-e65" secondAttribute="trailing" constant="20" id="zpf-1x-R0i"/>
                 </constraints>
             </view>
-            <point key="canvasLocation" x="336" y="287"/>
+            <point key="canvasLocation" x="337" y="281"/>
         </window>
-        <arrayController mode="entity" entityName="WTImageConfig" id="9nK-Oe-d5p" userLabel="ConfigurationController">
+        <arrayController mode="entity" entityName="WTImageConfig" automaticallyPreparesContent="YES" id="9nK-Oe-d5p" userLabel="ConfigurationController">
             <connections>
                 <binding destination="-2" name="managedObjectContext" keyPath="self.modelContext.managedObjectContext" id="BPT-VW-vUQ"/>
             </connections>
