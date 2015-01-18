@@ -4,12 +4,21 @@
 //
 
 #import "WTSettingsController.h"
+#import "WTModelContext.h"
 
+@interface WTSettingsController()
+
+@property WTModelContext *modelContext;
+
+@end
 
 @implementation WTSettingsController
 
 -(id) init {
     self = [super initWithWindowNibName:@"WTSettingsWindow"];
+    if(self) {
+        [self setModelContext:[[WTModelContext alloc] init]];
+    }
     return self;
 }
 

@@ -15,6 +15,8 @@
 		844FF7A81A6C02E5008BC6E9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844FF7A71A6C02E5008BC6E9 /* Images.xcassets */; };
 		844FF7B71A6C02E5008BC6E9 /* werbetafelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 844FF7B61A6C02E5008BC6E9 /* werbetafelTests.m */; };
 		844FF7C11A6C0BFC008BC6E9 /* WTSettingsWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844FF7C01A6C0BFC008BC6E9 /* WTSettingsWindow.xib */; };
+		844FF7C41A6C0CD1008BC6E9 /* WerbetafelModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 844FF7C21A6C0CD1008BC6E9 /* WerbetafelModel.xcdatamodeld */; };
+		844FF7C71A6C0D14008BC6E9 /* WTModelContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 844FF7C61A6C0D14008BC6E9 /* WTModelContext.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,9 @@
 		844FF7B51A6C02E5008BC6E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		844FF7B61A6C02E5008BC6E9 /* werbetafelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = werbetafelTests.m; sourceTree = "<group>"; };
 		844FF7C01A6C0BFC008BC6E9 /* WTSettingsWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTSettingsWindow.xib; sourceTree = "<group>"; };
+		844FF7C31A6C0CD1008BC6E9 /* WerbetafelModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WerbetafelModel.xcdatamodel; sourceTree = "<group>"; };
+		844FF7C51A6C0D13008BC6E9 /* WTModelContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTModelContext.h; sourceTree = "<group>"; };
+		844FF7C61A6C0D14008BC6E9 /* WTModelContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTModelContext.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +80,9 @@
 		60C8C9F2216C3D9721AA9CED /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				844FF7C21A6C0CD1008BC6E9 /* WerbetafelModel.xcdatamodeld */,
+				844FF7C51A6C0D13008BC6E9 /* WTModelContext.h */,
+				844FF7C61A6C0D14008BC6E9 /* WTModelContext.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -248,8 +256,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				844FF7C71A6C0D14008BC6E9 /* WTModelContext.m in Sources */,
 				844FF7A61A6C02E5008BC6E9 /* main.m in Sources */,
 				844FF7A41A6C02E5008BC6E9 /* AppDelegate.m in Sources */,
+				844FF7C41A6C0CD1008BC6E9 /* WerbetafelModel.xcdatamodeld in Sources */,
 				60C8C5E87E13773F2B733B5F /* WTDesktop.m in Sources */,
 				60C8CF7C5E66BB1DA148B29A /* WTSettingsController.m in Sources */,
 			);
@@ -450,6 +460,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		844FF7C21A6C0CD1008BC6E9 /* WerbetafelModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				844FF7C31A6C0CD1008BC6E9 /* WerbetafelModel.xcdatamodel */,
+			);
+			currentVersion = 844FF7C31A6C0CD1008BC6E9 /* WerbetafelModel.xcdatamodel */;
+			path = WerbetafelModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 844FF7951A6C02E5008BC6E9 /* Project object */;
 }
