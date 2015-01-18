@@ -6,9 +6,11 @@
 #import "WTImageScheduler.h"
 #import "WTModelContext.h"
 #import "WTDesktop.h"
+#import "WTImageConfig.h"
 
 @interface WTImageScheduler()
 @property (strong) WTModelContext *modelContext;
+@property (strong) WTDesktop *desktop;
 @end
 
 
@@ -18,25 +20,36 @@
     self = [super init];
     if(self) {
         [self setModelContext:[[WTModelContext alloc] init]];
+        [self setDesktop:[[WTDesktop alloc] init]];
     }
     return self;
 }
 
 -(void)handleSystemTimeChanged {
-    NSLog(@"Time change %@", NSDate.date);
-//    NSDate *now = [NSDate date];
-//    NSCalendar *calendar = [NSCalendar currentCalendar];
-//    NSDateComponents *components = [calendar components:NSHourCalendarUnit fromDate:now];
-//
-//    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"WTImageConfig"];
-//    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"hour == %@", components.hour]];
-//
-//    NSError *error = nil;
-//    if([[[self modelContext] managedObjectContext] executeFetchRequest:fetchRequest error:&error]) {
-//
-//    } else {
-//        [NSApp willNotPresentError:error];
-//    }
+    NSLog(@"System time changed");
+    NSDate *now = [NSDate date];
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [calendar components:NSHourCalendarUnit fromDate:now];
+    NSLog(@"components");
+
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"WTImageConfig"];
+    NSLog(@"fetch");
+    NSLog(@"Hour %li", components.hour);
+    [fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"hour = %li", components.hour]];
+
+    NSLog(@"predicate");
+    NSError *error = nil;
+    NSArray *resultSet = [[[self modelContext] managedObjectContext] executeFetchRequest:fetchRequest error:&error];
+    if(resultSet) {
+        if([resultSet count] > 0) {
+            NSLog(@"Has results");
+            WTImageConfig *image = [resultSet firstObject];
+            NSLog(@"Image %@", image.imagePath);
+            [[self desktop] setNewWallpaper:image.imagePath];
+        }
+    } else {
+        [NSApp willNotPresentError:error];
+    }
 }
 
 @end
