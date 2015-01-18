@@ -5,6 +5,7 @@
 
 #import "WTSettingsController.h"
 #import "WTModelContext.h"
+#import "WTSettingsDelegate.h"
 
 @interface WTSettingsController()
 @property (strong, readwrite) WTModelContext *modelContext;
@@ -23,6 +24,9 @@
 -(IBAction) saveAndClose:(id) sender {
     NSError *error = nil;
     if([[[self modelContext] managedObjectContext] save:&error]) {
+        if(self.delegate) {
+            [self.delegate settingsControllerDidFinish:self];
+        }
         [[self window] orderOut: self];
     }
     else {
@@ -32,6 +36,9 @@
 
 -(IBAction) saveWithoutClosing:(id) sender {
     [[[self modelContext] managedObjectContext] reset];
+    if(self.delegate) {
+        [self.delegate settingsControllerDidFinish:self];
+    }
     [[self window] orderOut: self];
 }
 

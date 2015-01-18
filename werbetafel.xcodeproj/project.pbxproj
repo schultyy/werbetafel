@@ -34,6 +34,7 @@
 /* Begin PBXFileReference section */
 		60C8C0165085AF1508F88DC3 /* WTImageScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTImageScheduler.h; sourceTree = "<group>"; };
 		60C8C9C54BD67907C0798286 /* WTSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTSettingsController.m; sourceTree = "<group>"; };
+		60C8C9D59B4DC6A8E4FA288E /* WTSettingsDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTSettingsDelegate.h; sourceTree = "<group>"; };
 		60C8CA4EA17ED560E9AE3F32 /* WTDesktop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTDesktop.h; sourceTree = "<group>"; };
 		60C8CAE1BA9FB83FFAD8A086 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = werbetafel/Base.lproj/MainMenu.xib; sourceTree = SOURCE_ROOT; };
 		60C8CB29FD6207AE68E2EFCE /* WTImageScheduler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTImageScheduler.m; sourceTree = "<group>"; };
@@ -81,6 +82,14 @@
 				844FF7C01A6C0BFC008BC6E9 /* WTSettingsWindow.xib */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		60C8C7C6ADCE24031FE7EF23 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				60C8C9D59B4DC6A8E4FA288E /* WTSettingsDelegate.h */,
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 		60C8C9F2216C3D9721AA9CED /* Models */ = {
@@ -136,6 +145,7 @@
 				60C8CD98C02F5B5B345B5AB1 /* Controllers */,
 				60C8C150D2D73C49BF2DCF1E /* Resources */,
 				60C8C9F2216C3D9721AA9CED /* Models */,
+				60C8C7C6ADCE24031FE7EF23 /* Delegates */,
 			);
 			path = werbetafel;
 			sourceTree = "<group>";

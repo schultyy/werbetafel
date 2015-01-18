@@ -10,7 +10,7 @@
 #import "WTSettingsController.h"
 #import "WTImageScheduler.h"
 
-@interface AppDelegate ()
+@interface AppDelegate()
 @property (strong) WTSettingsController *settingsController;
 @property (strong) WTImageScheduler *scheduler;
 @end
@@ -25,7 +25,8 @@
     self.statusBar.highlightMode = YES;
 
     [self setScheduler:[[WTImageScheduler alloc] init]];
-    [self setTimer: [NSTimer scheduledTimerWithTimeInterval:60.0 target:self selector:@selector(tick:) userInfo:nil repeats:YES]];
+
+    [self setTimer: [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(tick:) userInfo:nil repeats:YES]];
 }
 
 -(void) tick: (NSTimer *) theTimer{
@@ -36,10 +37,23 @@
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
 }
 
+#pragma mark - WTSettingsDelegate
+
+-(void) settingsControllerDidFinish: (WTSettingsController *) controller {
+    [self setSettingsController:nil];
+    [self setTimer:nil];
+    [self setTimer: [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(tick:) userInfo:nil repeats:YES]];
+}
+
 #pragma mark - IBAction
 
 -(IBAction)showSettingsDialog:(id)sender {
-    [self setSettingsController: [[WTSettingsController alloc] init]];
+    [[self timer] invalidate];
+    if(!self.settingsController) {
+        [self setSettingsController: [[WTSettingsController alloc] init]];
+        [[self settingsController] setDelegate:self];
+    }
+
     [[self settingsController] showWindow:self];
 }
 

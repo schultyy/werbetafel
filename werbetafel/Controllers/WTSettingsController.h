@@ -6,11 +6,13 @@
 #import <Cocoa/Cocoa.h>
 
 @class WTModelContext;
+@protocol WTSettingsDelegate;
 
 
 @interface WTSettingsController : NSWindowController
 
 @property (strong, readonly) WTModelContext *modelContext;
+@property (assign) NSObject<WTSettingsDelegate> *delegate;
 
 -(IBAction) saveAndClose:(id) sender;
 -(IBAction) saveWithoutClosing:(id) sender;

@@ -7,8 +7,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "WTSettingsDelegate.h"
 
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@interface AppDelegate : NSObject <NSApplicationDelegate, WTSettingsDelegate>
 
 @property (retain) NSStatusItem *statusItem;
 
