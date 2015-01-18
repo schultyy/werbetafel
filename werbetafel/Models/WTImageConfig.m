@@ -16,7 +16,7 @@
 
 -(void) setImagePath:(NSURL *)imagePath {
     [self willChangeValueForKey:@"imagePath"];
-    NSString *path = [[imagePath filePathURL] absoluteString];
+    NSString *path = [imagePath path];
     [self setPrimitiveValue:path forKey:@"imagePath"];
     [self didChangeValueForKey:@"imagePath"];
 }

@@ -10,11 +10,11 @@
 
 -(void) setNewWallpaper: (NSString *) wallpaper {
     NSWorkspace *sws = [NSWorkspace sharedWorkspace];
-
     NSError *err = nil;
+    NSURL *wallpaperUrl = [NSURL fileURLWithPath:wallpaper];
     for (NSScreen *screen in [NSScreen screens]) {
         NSDictionary *opt = [sws desktopImageOptionsForScreen:screen];
-        [sws setDesktopImageURL:[[NSURL alloc] initWithString:wallpaper] forScreen:screen options:opt error:&err];
+        [sws setDesktopImageURL: wallpaperUrl forScreen:screen options:opt error:&err];
         if (err) {
             NSLog(@"%@",[err localizedDescription]);
         }else{
