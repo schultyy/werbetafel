@@ -11,8 +11,8 @@
 @interface WTImageScheduler()
 @property (strong) WTModelContext *modelContext;
 @property (strong) WTDesktop *desktop;
+@property (retain) NSString *lastImage;
 @end
-
 
 @implementation WTImageScheduler
 
@@ -38,7 +38,11 @@
     if(resultSet) {
         if([resultSet count] > 0) {
             WTImageConfig *image = [resultSet firstObject];
+            if([image.imagePath isEqualToString:self.lastImage]) {
+                return;
+            }
             [[self desktop] setNewWallpaper:image.imagePath];
+            [self setLastImage:image.imagePath];
         }
     } else {
         [NSApp willNotPresentError:error];
